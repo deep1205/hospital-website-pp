@@ -1,0 +1,157 @@
+/* //////////////signupformcss ends///////////////// */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+header .header {
+  background-color: #fff;
+  height: 30px;
+}
+header a img {
+  width: 134px;
+  margin-top: 4px;
+}
+a:hover{
+  color:gold;
+}
+.loginp-page {
+  float: right;
+  margin: 10px 100px 40px 0;
+
+}
+
+.myformheadertextp {
+  color: black;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+.loginp-page .formp .loginp {
+  margin-top: -25px;
+  margin-bottom: 5px;
+  color: red;
+}
+
+.formp {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 350px;
+  margin: 0 0;
+  padding: 30px 30px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.formp input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 5px;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.formp button {
+  margin: 3px auto;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background-color: #328f8a;
+  background-image: linear-gradient(45deg, #b95ce4, #4f29cd);
+  width: 80%;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-bottom: -10px;
+}
+/*---map css---*/
+#googlemaphomepagekiposition {
+  width: 55%;
+}
+.main-wrapper {
+  margin: 20px 0;
+  padding: 4% 6%;
+  margin-right: 3%;
+  filter: drop-shadow(1px 5px 3px rgba(131, 46, 46, 0.24));
+  position: relative;
+  margin-top: -80px;
+}
+
+.info-wrapper {
+  margin: 15px auto;
+}
+.map-details {
+  text-align: center;
+  color: black;
+  font-size: 1em;
+  margin: 2px auto;
+  margin-bottom: 90px;
+  padding-bottom: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.search-input {
+  font-size: 0.99em;
+  width: 270px;
+  padding: 4.6% 4%;
+  border-radius: 4px;
+  box-shadow: 17px solid red;
+  color: black;
+  font-family: "Times New Roman", Times, serif, "FontAwesome";
+  border: 400px ;
+  background-color:whitesmoke;
+  
+
+  
+}
+
+.signupheader{
+  margin-left: auto;
+  display: flex;
+  padding:0 -20px;
+}
+
+/*---map css---*/
+@media (max-width: 860px) {
+  .loginp-page {
+    margin:auto 25px !important;
+    position: relative;
+    margin-bottom: 50px;
+   
+  }
+  .search-input:hover,
+  .search-input:focus {
+    border: 2px solid cyan !important;
+    background: #000;
+    color: white;
+  }
+
+  #googlemaphomepagekiposition {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+  .search-input {
+    margin-top: 520px;
+    margin-left: 34px;
+    max-width: 370px !important;
+    padding: 10% 5%;
+    color: black;
+  }
+  .main-wrapper {
+    padding: 0% 0% !important;
+    margin: 0px auto;
+    top: -80px;
+    width: 100% !important;
+    margin-bottom: 40% !important;
+  }
+}

@@ -1,0 +1,104 @@
+.indexMaphomepage {
+  position: absolute;
+  height: 400px !important;
+  display: flex;
+  width: 760px !important;
+  float: left;
+}
+
+#searchbar{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  padding: 20px 0px;
+  text-align: center;
+  color: "blue";
+}
+@media (max-width: 860px) {
+  .indexMaphomepage {
+    position: relative !important;
+    margin: 70px 0 -100px 0 !important;
+    width: 100vw !important;
+    
+  }
+  #searchbar{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  top:80px;
+  left:10px;
+  margin:10px 0;
+  padding: 20px 0;
+  text-align: center;
+  color: "blue";
+}
+
+  
+}
+/*   
+  @media screen and (max-width: 1300px) {
+    .indexMap {
+      width: 1290px;
+      height: 516px;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .indexMap {
+      width: 1190px;
+      height: 476px;
+    }
+  }
+  @media screen and (max-width: 960px) {
+    .indexMap {
+      width: 950px;
+      height: 380px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .indexMap {
+      width: 630px;
+      height: 380px;
+    }
+  } */
+.SearchBar {
+  display: flex;
+  height: 30px !important;
+
+  padding: 30px 0;
+}
+.input {
+  font-size: 0.99em;
+  width: 270px;
+  padding: 4.6% 4%;
+  border-radius: 4px;
+  box-shadow: 17px solid red;
+  color: black;
+  font-family: "Times New Roman", Times, serif, "FontAwesome";
+  border: 400px;
+  background-color: whitesmoke;
+}
+.button {
+  margin-right: 15px;
+}
+.myLocationBtn:hover {
+  background-color: white;
+  color: white;
+}
+.myLocationBtn {
+  border-radius: 10px;
+  display: hidden;
+  visibility: hidden !important;
+}
+.searchHospital {
+  border: none;
+  width: 200px;
+  margin-left: 1rem;
+}
+.searchHospital:focus {
+  outline: none;
+}
+.myLocationBtn:focus {
+  outline: none;
+}
