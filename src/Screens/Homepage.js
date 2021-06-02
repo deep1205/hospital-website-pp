@@ -122,7 +122,10 @@ const Homepage = () => {
     <>
       <Header location="home" />
       <br />
-
+      <div className="fdiv">
+      <div id="googlemaphomepagekiposition" className="main-wrapper">
+        <MyGoogleMap ref={map} />
+      </div>
       <div id="patientformkiposition">
         <div className="loginp-page">
           <div className="formp">
@@ -212,8 +215,6 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div id="googlemaphomepagekiposition" className="main-wrapper">
-        <MyGoogleMap ref={map} />
       </div>
     </>
   );

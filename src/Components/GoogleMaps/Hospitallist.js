@@ -28,7 +28,8 @@ const HospitalList = (props) => {
             driverno: data["pickedBy"].mobileNo,
             pcase: data.pcase,
             rideid: data.RideId,
-            _id:data['pickedBy']._id
+            _id:data['pickedBy']._id,
+            patientPolyline:data.patientPolyline
           };
         });
         setdata(arr);
@@ -41,7 +42,8 @@ const HospitalList = (props) => {
     pcase: "",
     rideid: "",
     driverno: "",
-    _id:''
+    _id:'',
+    patientPolyline:""
   });
 
   return (
@@ -86,7 +88,8 @@ const HospitalList = (props) => {
                           pcase: val.pcase,
                           rideid: val.rideid,
                           driverno: val.driverno,
-                          _id:val._id
+                          _id:val._id,
+                          patientPolyline:val.patientPolyline 
                         });
                       }}
                     >
@@ -104,19 +107,33 @@ const HospitalList = (props) => {
           </div>
         </DropdownMenu>
       </ButtonDropdown>
-      <Map _id={hospital._id} />
+      <Map 
+      _id={hospital._id} 
+      polyline={hospital.patientPolyline} />
       {hospital.name !== "" ? (
         <div className="card" style={{ margin: "-30px 0" }}>
-          <h4 style={{ textAlign: "center", margin: "3px 0" }}>Ride details</h4>
+          <h4 style={{ margin: "3px 0" }}>&nbsp;Ride details</h4>
           <div className="card-body">
-            <p>
-              Name:{hospital.name} <br />
-              Case:{hospital.pcase}
-              <br />
-              RideId:{hospital.rideid}
-              <br />
-              Driver No:{hospital.driverno}
+            <div style={{width:"50%",textAlign:"justify"}}>
+            <p style={{fontSize:20}}>
+              Name:{hospital.name}
             </p>
+            </div>
+            <div style={{width:"50%",textAlign:"justify"}}>
+            <p style={{fontSize:20}}>
+            Case:{hospital.pcase}
+            </p>
+            </div>
+            <div style={{width:"50%",textAlign:"justify"}}>
+            <p style={{fontSize:20}}>
+            RideId:{hospital.rideid}
+            </p>
+            </div>
+            <div style={{width:"50%",textAlign:"justify"}}>
+            <p style={{fontSize:20}}>
+            Driver No:{hospital.driverno}
+            </p>
+            </div>
           </div>
         </div>
       ) : null}

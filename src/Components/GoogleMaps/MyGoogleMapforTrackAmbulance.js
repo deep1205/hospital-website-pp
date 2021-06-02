@@ -3,6 +3,8 @@ import styled from "styled-components";
 import io from "socket.io-client";
 import "./trackambulance.css";
 import drivericon from "../../images/drivericon.png"
+
+const decodePolyline = require('decode-google-map-polyline');
 var map,
   infoWindow,
   markers,
@@ -10,6 +12,7 @@ var map,
   driversocket,
   driverWindow,
   drivermarker,
+  poly,
   usermarker;
 
 const HomePageSideMap = (props) => {
@@ -111,6 +114,21 @@ const HomePageSideMap = (props) => {
      drivermarker = new window.google.maps.Marker({
        icon: drivericon,
      });
+
+     if (props.polyline!==undefined) {
+      poly = decodePolyline(props.polyline)[1];
+
+      console.log(poly);
+
+     const driverPath = new window.google.maps.Polyline({
+      path: poly,
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+    });
+    driverPath.setMap(map); 
+     }
 
     // markers = new window.google.maps.Marker({
     //   map,

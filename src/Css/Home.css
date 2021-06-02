@@ -9,13 +9,24 @@ header a img {
   width: 134px;
   margin-top: 4px;
 }
+
+.fdiv{
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 70px;
+}
 a:hover{
   color:gold;
 }
 .loginp-page {
-  float: right;
-  margin: 10px 100px 40px 0;
-
+  position: relative;
+  top: -15px;
 }
 
 .myformheadertextp {
@@ -73,14 +84,24 @@ a:hover{
   border-radius: 50px;
   margin-bottom: -10px;
 }
+
+.indexMaphomepage {
+  position: relative !important;
+  height: 400px !important;
+  display: flex;
+  width: 760px !important;
+  float: left;
+}
 /*---map css---*/
 #googlemaphomepagekiposition {
-  width: 55%;
+
+  display: flex;
+  height: 70vh;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 .main-wrapper {
-  margin: 20px 0;
-  padding: 4% 6%;
-  margin-right: 3%;
   filter: drop-shadow(1px 5px 3px rgba(131, 46, 46, 0.24));
   position: relative;
   margin-top: -80px;
@@ -121,6 +142,21 @@ a:hover{
 }
 
 /*---map css---*/
+@media (min-width: 1125px) {
+  .loginp-page {
+    position: relative;
+    left: 15px;
+    top:-15px;
+  }
+}
+
+@media (max-width: 1125px) {
+  .loginp-page {
+    position: relative;
+    top: 15px;
+  }
+}
+
 @media (max-width: 860px) {
   .loginp-page {
     margin:auto 25px !important;
@@ -140,6 +176,12 @@ a:hover{
     display: flex;
     width: 100%;
   }
+
+  .loginp-page {
+    position: relative;
+    top: 15px;
+  }
+  
   .search-input {
     margin-top: 520px;
     margin-left: 34px;
