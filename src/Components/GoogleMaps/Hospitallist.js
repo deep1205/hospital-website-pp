@@ -5,6 +5,9 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
+
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../Css/Hospitalist.css";
@@ -112,27 +115,49 @@ const HospitalList = (props) => {
       polyline={hospital.patientPolyline} />
       {hospital.name !== "" ? (
         <div className="card" style={{ margin: "-30px 0" }}>
-          <h4 style={{ margin: "3px 0" }}>&nbsp;Ride details</h4>
+
+          <h4 style={{ margin: "15px 50px" }}>
+            &#9;Hospital Details: 
+          <HighlightOffIcon style={{float:"right",cursor:"pointer"}}
+          onClick={()=>{
+            setHospital({
+              name: "",
+              pcase: "",
+              rideid: "",
+              driverno: "",
+              _id:'',
+              patientPolyline:""
+            });
+          }}/>
+          </h4>
           <div className="card-body">
-            <div style={{width:"50%",textAlign:"justify"}}>
-            <p style={{fontSize:20}}>
+            <div style={{padding:30}}> 
+            <div className="card-box">
+            <p className="val">
               Name:{hospital.name}
             </p>
             </div>
-            <div style={{width:"50%",textAlign:"justify"}}>
-            <p style={{fontSize:20}}>
+            </div>
+            <div style={{padding:30}}> 
+            <div className="card-box">
+            <p className="val">
             Case:{hospital.pcase}
             </p>
             </div>
-            <div style={{width:"50%",textAlign:"justify"}}>
-            <p style={{fontSize:20}}>
+            </div>
+            <div style={{padding:30}}> 
+            <div className="card-box">
+            <p className="val">
             RideId:{hospital.rideid}
             </p>
             </div>
-            <div style={{width:"50%",textAlign:"justify"}}>
-            <p style={{fontSize:20}}>
+            </div>
+            <div style={{padding:30}}> 
+            <div className="card-box">
+            <p className="val">
             Driver No:{hospital.driverno}
             </p>
+            </div>
             </div>
           </div>
         </div>
